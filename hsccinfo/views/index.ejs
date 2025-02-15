@@ -1,19 +1,11 @@
 Link<!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <style>
-      h2{
-        color: green;}
-    </style>
+    <!-- head partial gets included here-->
+    <%-include('./partials/head') -%> 
   </head>
   <body> <ul class="menu">
-    <!-- this is our horazontal navbar -->
-    <li><a href="/"> <img src="images/bdpalogo.png" height="25> </a></li>
-    <li><a href="/">Home</a></li>
-    <li><a href="/bdpahistory">BDPA History</a></li> 
-  <li><a href="/">Sample form</a></li>
+    <%-include('./partials/menu') -%>
   </ul> 
 <!-- End navbar -->
 <br><br><br>
