@@ -11,9 +11,8 @@ while (runningdec > 0){
 var newBit= runningdec % 2
 binString=newBit.toString()+binString;
 runningdec = Math.floor(runningdec/2)
-}// end while loop 
-
-
+}// End while loop 
+return binString;
 }// End ConvertDecToBin function
 
 
