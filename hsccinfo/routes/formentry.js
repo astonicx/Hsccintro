@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+const Converter=require("../middleware/NumberConvert")
 /* GET formentry page. */
 router.get('/', function(req, res, next) {
   res.render('formentry', { title: 'Sample Form Entry' });
@@ -16,8 +16,11 @@ router.post('/', function(req, res, next) {
   let usersum=Number(num1)+Number(num2); 
 // display cheakbox results 
 if ( process.env.CONSOLE_DEBUG=="true") {
-  console.log(req.body.numcovert2);
-}
+  console.log(req.body.numconvert1)
+  console.log(req.body.numconvert2);
+  console.log(num1); //displa num 1
+  console.log(Converter.ConvertDecToBin(num1))// display bianary conversion 
+}// End debugging code 
 
   res.render('formresults', {
     title: 'Sample Form Results',
