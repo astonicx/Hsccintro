@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-
 <html>
- <!-- Include statment has head section -->
-<%-include('./partials/head') -%> 
+<!-- Include statement has head section -->
+<%- include('./partials/head') -%>
+
 <body>
-<!-- Include navigation menu -->
-<%-include('./partials/menu') -%>
+    <!-- Include navigation menu -->
+    <%- include('./partials/menu') -%>
 
-
+   <h1> Sample data entry </h1>
    <form name="SampleForm" action="/formentry" method="POST">
       <label for="firstname"> First Name: </label> <input type="text" name="firstname" id="firstname" required>
       <label for="lastname"> Last Name: </label> <input type="text" name="lastname" id="lastname" required> <br>
@@ -22,7 +22,9 @@
       <label for="numconvert2"> Show in hexadecimal </label>
 
       <input type="submit" value="Submit form">
-</form>
+
+
+   </form>
 
 </body>
 </html>
